@@ -63,13 +63,13 @@ defmodule DateTimeParser.MixProject do
     [{:exprof, "~> 0.2.0", only: :bench}]
     |> add_if({:nimble_parsec, "~> 0.5.0", runtime: false}, "< 1.6.0")
     |> add_if({:nimble_parsec, "~> 1.0", runtime: false}, ">= 1.6.0")
-    |> add_if({:timex, ">= 3.2.1 and <= 3.7.2"}, ">= 1.6.0")
+    |> add_if({:timex, ">= 3.2.1 and <= 3.7.9"}, ">= 1.6.0")
     |> add_if({:timex, "< 3.2.1"}, "< 1.6.0")
     |> add_if({:gettext, "<= 0.16.1"}, "< 1.6.0")
-    |> add_if({:benchee, "~> 1.0", only: [:bench], runtime: false}, ">= 1.6.0")
-    |> add_if({:credo, "~> 1.1", only: [:dev, :test], runtime: false}, ">= 1.5.0")
-    |> add_if({:dialyxir, "~> 1.0.0", only: [:dev, :test], runtime: false}, ">= 1.6.0")
-    |> add_if({:ex_doc, "~> 0.20", only: :dev, runtime: false}, ">= 1.7.0")
+    |> add_if({:benchee, "~> 1.1.0", only: [:bench], runtime: false}, ">= 1.6.0")
+    |> add_if({:credo, "~> 1.6.6", only: [:dev, :test], runtime: false}, ">= 1.5.0")
+    |> add_if({:dialyxir, "~> 1.2.0", only: [:dev, :test], runtime: false}, ">= 1.6.0")
+    |> add_if({:ex_doc, "~> 0.28.5", only: :dev, runtime: false}, ">= 1.7.0")
   end
 
   defp docs() do

@@ -13,13 +13,6 @@
 |`""=""9/5/2018"""`|`2018-09-05T00:00:00`|parse_datetime|`[assume_time: true]`|
 |`"=""10/1/2018"""`|`2018-10-01`|parse| |
 |`"=""9/5/2018"""`|`2018-09-05`|parse| |
-|`"Apr 1, 2016 12:02:53 AM PDT"`|`2016-04-01T07:02:53Z`|parse|`[to_utc: true]`|
-|`"Apr 1, 2017 2:21:25 AM PDT"`|`2017-04-01T09:21:25Z`|parse|`[to_utc: true]`|
-|`"Dec 1, 2018 7:39:53 AM PST"`|`2018-12-01T15:39:53Z`|parse|`[to_utc: true]`|
-|`"Jan 1, 2013 06:34:31 PM PST"`|`2013-01-02T02:34:31Z`|parse|`[to_utc: true]`|
-|`"Jan 1, 2014 6:44:47 AM PST"`|`2014-01-01T14:44:47Z`|parse|`[to_utc: true]`|
-|`"Mar 28, 2014 6:44:47 AM PDT"`|`2014-03-28T13:44:47Z`|parse|`[to_utc: true]`|
-|`"Nov 16, 2017 9:41:28 PM PST"`|`2017-11-17T05:41:28Z`|parse|`[to_utc: true]`|
 |`"Nov 20, 2016 22:09:23 PM"`|`2016-11-20T22:09:23`|parse| |
 |`"Sat, 29 Sep 2018 21:36:28 -0400"`|`2018-09-30T01:36:28Z`|parse|`[to_utc: true]`|
 |`"September 28, 2016"`|`2016-09-28`|parse| |
@@ -166,9 +159,7 @@
 |`2017-09-31`|`Could not parse "2017-09-31"`|parse_date| |
 |`2017-09-31 00:00:00 UTC`|`Could not parse "2017-09-31 00:00:00 UTC"`|parse_datetime| |
 |`2017-10-06+03:45:16`|`2017-10-06T03:45:16`|parse| |
-|`2017-10-24 04:00:10 PDT`|`2017-10-24T11:00:10Z`|parse|`[to_utc: true]`|
 |`2017-11-04 15:20:47 EDT`|`2017-11-04`|parse_date| |
-|`2017-11-04 15:20:47 EDT`|`2017-11-04T19:20:47Z`|parse_datetime|`[to_utc: true]`|
 |`2017-11-04 15:20:47 EST`|`2017-11-04`|parse_date| |
 |`2017-11-04 15:20:47 EST`|`2017-11-04T20:20:47Z`|parse_datetime|`[to_utc: true]`|
 |`2017-11-04 15:20:47 UTC`|`2017-11-04`|parse_date| |
@@ -186,7 +177,6 @@
 |`2019-05-16+04:00`|`2019-05-16`|parse_date| |
 |`2019-05-16+04:00`|`2019-05-16T04:00:00`|parse_datetime|`[assume_time: true]`|
 |`2019-05-20 10:00:00PST`|`2019-05-20`|parse_date| |
-|`2019-05-20 10:00:00PST`|`2019-05-20T17:00:00Z`|parse_datetime|`[to_utc: true]`|
 |`2019/01/31 0:01`|`2019-01-31T00:01:00`|parse| |
 |`2021-03-27 00:00 am`|`2021-03-27T00:00:00`|parse_datetime| |
 |`2021-03-27 00:00 pm`|`2021-03-27T00:00:00`|parse_datetime| |
@@ -270,13 +260,11 @@
 |`Jan-01-19`|`2019-01-01T10:13:15`|parse|`[assume_time: ~T[10:13:15]]`|
 |`Jan-01-2018`|`2018-01-01`|parse| |
 |`May 30, 2019 4:31:09 AM PDT`|`2019-05-30`|parse_date| |
-|`May 30, 2019 4:31:09 AM PDT`|`2019-05-30T11:31:09Z`|parse_datetime|`[to_utc: true]`|
 |`Monday 01 October 2018 06:34:19 AM`|`2018-10-01T06:34:19`|parse| |
 |`Monday 02 October 2017 9:04:49 AM`|`2017-10-02T09:04:49`|parse| |
 |`November 29, 2016`|`2016-11-29`|parse_date| |
 |`November 29, 2016`|`2016-11-29T00:00:00`|parse_datetime|`[assume_time: true]`|
 |`Oct 5, 2018 6:16:56 PM PDT`|`2018-10-05`|parse_date| |
-|`Oct 5, 2018 6:16:56 PM PDT`|`2018-10-06T01:16:56Z`|parse_datetime|`[to_utc: true]`|
 |`Sep-19-16`|`2016-09-19`|parse_date| |
 |`Sep-19-16`|`2016-09-19T00:00:00`|parse_datetime|`[assume_time: true]`|
 |`Sun 01 January 2017 10:11:02 PM`|`2017-01-01`|parse_date| |
